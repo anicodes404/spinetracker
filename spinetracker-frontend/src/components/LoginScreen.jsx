@@ -22,6 +22,13 @@ export default function LoginScreen() {
         }
     };
 
+    // FastAPI fetch update call
+    fetch("http://localhost:5000/api/login"), {
+        method: "POST", 
+        headers: {"Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+    }
+
     return(
         <div>
             <form
