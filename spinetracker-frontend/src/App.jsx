@@ -10,7 +10,6 @@ function App() {
   return (
     <>
      <div>
-      <h1>Spinetracker</h1>
       < LoginScreen/>
      </div>
      </>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 
+
 export default function LoginScreen() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState(''); 
@@ -17,15 +18,14 @@ export default function LoginScreen() {
             const data = await res.json(); 
             alert(data.message); 
         }  catch(error) {
-            alert('Login failed');
+            alert('Login failed', error);
         }
     };
 
     return(
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div>
             <form
             onSubmit={handleLogin}
-            className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
             >
             <h2 className="text-2xl font-bold mb-6 text-center text-indigo-600">Spine Tracker</h2>
 
