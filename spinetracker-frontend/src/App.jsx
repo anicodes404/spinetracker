@@ -1,19 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import LoginScreen from './components/LoginScreen'
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import LoginPage from './pages/LoginPage'; 
+import SignupPage from "./pages/SignupPage";
+import bookShelfPage from "./pages/BookshelfPage";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-     <div>
-      < LoginScreen/>
-     </div>
-     </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/bookshelf" element={<bookShelfPage />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App

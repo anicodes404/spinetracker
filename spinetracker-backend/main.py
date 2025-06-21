@@ -1,8 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from routers import google_books
 
 app = FastAPI()
+
+app.include_router(google_books.router)
+app.include_router(books.router)
 
 # enable CORS
 app.add_middleware(

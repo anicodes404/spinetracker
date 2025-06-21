@@ -11,7 +11,7 @@ Spine Tracker is a full-stack application designed for book lovers to track thei
 - 💅 **[Skeleton CSS](http://getskeleton.com/)
 
 ### Backend
-- 🐍 FastAPI
+- 🐍 
 - 🌐 **Flask-CORS** — for cross-origin support
 
 ---
